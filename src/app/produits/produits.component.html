@@ -15,7 +15,9 @@
           <td>{{produit.id}}</td>
           <td>{{produit.nom}}</td>
           <td>{{produit.prix}}</td>
-          <td>{{produit.dateCreation| date:'dd/MM/yyyy'}}</td>
+          <td>{{produit.dateCreation}}</td>
+          <td><a class="btn btn-danger" (click)="supprimerProduit(produit)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/update-produit',produit.id]">Modifier</a></td>
         </tr>
         </tbody>
       </table>

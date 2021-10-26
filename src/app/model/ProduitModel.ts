@@ -1,7 +1,7 @@
 export class ProduitModel {
-  id:number | undefined;
-  nom:string | undefined;
-  prix:number| undefined;
-  dateCreation: Date | undefined;
+  id!:number;
+  nom!:string;
+  prix!: number;
+  dateCreation!: String;
 
 }
