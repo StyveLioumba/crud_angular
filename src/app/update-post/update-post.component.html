@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Modification du post {{currentPost.title}}</h2>
+
+  <form>
+    <div class="mb-3" >
+      <label for="id" class="form-label">User Identifiant</label>
+      <input type="number" [(ngModel)]="currentPost.userId" placeholder="1" class="form-control" id="id" name="id">
+    </div>
+    <div class="mb-3">
+      <label for="titre" class="form-label">titre</label>
+      <input type="text" [(ngModel)]="currentPost.title"  class="form-control" placeholder="nouveau titre" id="titre" name="titre">
+    </div>
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea class="form-control" [(ngModel)]="currentPost.body" placeholder="écrivez une description" name="description" id="description"></textarea>
+    </div>
+
+    <button type="submit" (click)="miseAjourPost()" class="btn btn-success">Modifier</button>
+
+  </form>
+
+</div>

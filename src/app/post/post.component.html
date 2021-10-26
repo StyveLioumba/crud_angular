@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>UserId</th>
+          <th>Titre</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let post of posts">
+        <tr>
+          <td>{{post.id}}</td>
+          <td>{{post.userId}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}
+          </td> <td><a class="btn btn-danger" (click)="suppPost(post)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/update-post',post.id]">Modifier</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

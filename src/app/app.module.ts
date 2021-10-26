@@ -7,18 +7,26 @@ import { ProduitsComponent } from './produits/produits.component';
 import { AddProduitComponent } from './add-produit/add-produit.component';
 import {FormsModule} from "@angular/forms";
 import { UpdateProduitComponent } from './update-produit/update-produit.component';
+import {HttpClientModule} from "@angular/common/http";
+import {PostComponent} from "./post/post.component";
+import { AddPostComponent } from './add-post/add-post.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProduitsComponent,
     AddProduitComponent,
-    UpdateProduitComponent
+    UpdateProduitComponent,
+    PostComponent,
+    AddPostComponent,
+    UpdatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
